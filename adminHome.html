@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Bidonit - Online Auction System</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--
+
+TemplateMo 546 Sixteen Clothing
+
+https://templatemo.com/tm-546-sixteen-clothing
+
+-->
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-sixteen.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">    <img src="./assets//images/bidonit_logo.png" alt="" width="50" height="50"> </img>
+          <a class="navbar-brand" href="index.html"><h2>Bidonit <em>Online Auction System</em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="adminHome.html">Homepage
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="sellers.html">Sellers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="bidders.html">Bidders</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products.html">Products</a>
+              </li>
+              <li class="nav-item" onclick="logout()">
+                <a class="nav-link" href="admin.html">Admin Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading contact-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h2>Admin Dashboard</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ag-format-container">
+        <div class="ag-courses_box">
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title" onclick="navigateToSellers()">
+               Sellers
+              </div>
+      
+              <div class="ag-courses-item_date-box">
+                Total:
+                <span class="ag-courses-item_date" id="sellersCount">
+                  0
+                </span>
+              </div>
+            </a>
+          </div>
+      
+          <div class="ag-courses_item" onclick="navigateToBidders()">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                Bidders
+              </div>
+      
+              <div class="ag-courses-item_date-box">
+                Total:
+                <span class="ag-courses-item_date" id="biddersCount">
+                  0
+                </span>
+              </div>
+            </a>
+          </div>
+      
+          <div class="ag-courses_item" onclick="navigateToProducts()">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+      
+              <div class="ag-courses-item_title">
+                Products
+              </div>
+      
+              <div class="ag-courses-item_date-box">
+                Total:
+                <span class="ag-courses-item_date" id="productsCount">
+                  0
+                </span>
+              </div>
+            </a>
+          </div>
+      
+        </div>
+      </div>
+
+    
+
+    <div class="happy-clients">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Our Happy Customers</h2>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="owl-clients owl-carousel">
+              <div class="client-item">
+                <img src="assets/images/client-01.png" alt="1">
+              </div>
+              
+              <div class="client-item">
+                <img src="assets/images/client-01.png" alt="2">
+              </div>
+              
+              <div class="client-item">
+                <img src="assets/images/client-01.png" alt="3">
+              </div>
+              
+              <div class="client-item">
+                <img src="assets/images/client-01.png" alt="4">
+              </div>
+              
+              <div class="client-item">
+                <img src="assets/images/client-01.png" alt="5">
+              </div>
+              
+              <div class="client-item">
+                <img src="assets/images/client-01.png" alt="6">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>Copyright &copy; 2023 Bidonit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-storage-compat.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+ const firebaseConfig = {
+  apiKey: "AIzaSyC8i6daolY4gs2P7BnaVx6NdcvpGIsCjr0",
+  authDomain: "test-project-cdbb7.firebaseapp.com",
+  databaseURL: "https://test-project-cdbb7-default-rtdb.firebaseio.com",
+  projectId: "test-project-cdbb7",
+  storageBucket: "test-project-cdbb7.appspot.com",
+  messagingSenderId: "124733160779",
+  appId: "1:124733160779:web:95ee5fe1bad28e3491fcce",
+  measurementId: "G-RPJP1LE6PD"
+};
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      var db = firebase.firestore();
+   
+    </script>
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
+    <script>
+        function navigateToSellers(){
+            window.location = "sellers.html"; 
+        }
+
+        function navigateToBidders(){
+            window.location = "bidders.html"; 
+        }
+
+        function navigateToProducts(){
+            window.location = "products.html"; 
+        }
+    </script>
+
+    <script>
+        var sellerCount = document.getElementById("sellersCount");
+        var bidderCount = document.getElementById("biddersCount");
+        var productsCount = document.getElementById("productsCount");
+
+        var sellerRef = db.collection("Seller");
+        var bidderRef = db.collection("Bidder");
+        var productsRef = db.collection("Products");
+
+        sellerRef
+        .get()
+        .then((snapshot) => {
+            var data = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+            }));
+            sellerCount.innerHTML = data.length;
+        });
+
+        bidderRef
+        .get()
+        .then((snapshot) => {
+            var data = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+            }));
+            bidderCount.innerHTML = data.length;
+        });
+
+        productsRef
+        .get()
+        .then((snapshot) => {
+            var data = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+            }));
+            productsCount.innerHTML = data.length;
+        });
+
+
+    </script>
+
+<script>
+    const auth = firebase.auth();
+        function logout(){
+            auth.signOut();
+            window.location = "login.html";
+        }
+  </script>
+
+
+  </body>
+
+</html>
